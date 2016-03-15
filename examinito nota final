@@ -1,0 +1,30 @@
+// nota final 1.cpp : Defines the entry point for the console application.
+//
+// nombre: maria teresa vera 
+//fecha: 15 de marzo
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+	int  p1,p2,p3,p,np,nf,n;
+	cout<<"escribir nota primer parcial";
+	cin>> p1;
+	cout<< "escribir nota segundo parcial";
+	cin>> p2;
+	cout<< "escribir nota tercer parcial";
+	cin>> p3;
+	cout<<"escribir examen final";
+	cin>> nf;
+	cout<< "escribir nota proyecto";
+	cin>>p;
+	cout<< "escribir nota practica";
+	cin>>np;
+	n= (p1+p2+p3)*0.15+30*0.30+15+0.15+10*0.10;
+	cout<< "la nota final es";
+	cout<< n;
+	getch();
+
+}
