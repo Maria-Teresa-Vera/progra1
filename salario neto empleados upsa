@@ -1,0 +1,28 @@
+// SALARIO NETO.cpp : Defines the entry point for the console application.
+//MARIA TERESA VERA ESCOBAR
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define IVA 0.13
+#define AFP 0.1271
+using namespace std;
+void main()
+{
+	int N,i;
+	float SB,SN;
+	cout<< "Ingrese numero empleados:";
+	cin>> N;
+	for (i=1;i<=N;i++)
+	{
+		cout<< "Ingrese Salario Bruto:";
+		cin>> SB;
+		if (SB>=7000)
+			SN=SB-(IVA+AFP)*SB;
+		else
+			SN=(1-AFP)*SB;
+		cout<< "El salario neto es"<<SN<<endl;
+
+	}
+getch();
+}
