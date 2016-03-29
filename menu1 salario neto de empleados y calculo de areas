@@ -1,0 +1,70 @@
+// MENU SALARIO Y CALCULO DE AREAS.cpp : Defines the entry point for the console application.
+//MARIA TERESA VERA ESCOBAR
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define IVA 0.13
+#define AFP 0.1271
+#define Pi 3.1416
+using namespace std;
+void main()
+{
+	int N,i,opcion;
+	float SB,SN,A,L,R,B,H;
+	do {
+		cout<<endl;
+		cout<< "1.- salario neto del trabajador:"<<endl;
+		cout<< "2.- el area del cuadrado es:"<<endl;
+		cout<< "3.- el area del circulo es:"<<endl;
+		cout<< "4.- el area del triangulo es:"<<endl;
+		cout<< "0.- salir:"<<endl;
+		cout<< " elige una opcion:"<<endl;
+		cin>> opcion;
+		switch (opcion)
+		{
+		case 1:{
+				cout<< "ingrese el numero de empleados:";
+				cin>> N;
+				for (i=1;i<=N;i++)
+				{
+					cout<< "ingrese el salario bruto del trabajador:";
+					cin>> SB;
+					if (SB>=7000)
+						SN=SB-(IVA+AFP)*SB;
+					else
+						SN=(1-AFP)*SB;
+					cout<< "el salari neto es"<<SN<<endl;
+				}
+			   
+		case 2:{
+				cout<< "ingrese un lado del cuadrado:";
+				cin>> L;
+				A= (L*L);
+				cout<< "el area del cuadrado es:"<<endl;
+			   }
+		case 3:{
+				cout<< "ingrese el radio:";
+				cin>> R;
+				A=Pi*(R*R);
+				cout<< "el area del circulo es:" <<endl;
+			   }
+		case 4:{
+				cout<< "ingrese la base del triangulo:";
+				cin>> B;
+				cout<< "ingrese la altura del triangulo:";
+				cin>> H;
+				A=(B*H)/2;
+				cout<< "el area del triangulo es:";
+			   }
+		case 0:
+				cout<< "salir";break;
+		default:cout<<"opcion invalida"<<endl;
+			   
+			   }
+		}
+		getch();
+		system("cls");
+	}while(opcion!=0);
+	getch();
+}
