@@ -1,0 +1,40 @@
+// notazonadecontrol.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+using namespace std;
+void main ()
+{
+	int NR,i;
+	float PR,P1,P2,P3,EF,Promedio,NF;
+	cout<< "-999 para terminar:";
+	cout<< "ingrese el numero de registro:";
+	cin>>NR;
+	Promedio=0;
+		i=1;
+		while(NR!=-999) 
+		{
+			cout<< "ingrese la nota practica:";
+			cin>> PR;
+			cout<< "ingrese la nota del primer parcial:";
+			cin>> P1;
+			cout<< "ingrese la nota del segundo pracial:";
+			cin>> P2;
+			cout<< "ingrese la nota del tercer parcial:";
+			cin>> P3;
+			cout<< "ingrese la nota del examen final:";
+			cin>> EF;
+			NF= (PR*0.2)+((P1+P2+P3)/3)*0.4+(EF*0.4);
+			Promedio=Promedio +NF;
+				i=i++;
+				system("cls");
+				cout<< "-999 para terminar:";
+			cout<< "ingrese el numero de registro:";
+			cin>> NR;
+			
+		}
+		cout<< "el promedio de nota es:"<<Promedio/(i-1)<<endl;
+		getch();
+}
