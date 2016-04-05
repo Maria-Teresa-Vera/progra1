@@ -1,0 +1,38 @@
+// promedio notas.cpp : Defines the entry point for the console application.
+//
+
+
+// notadowhile.cpp : Defines the entry point for the console application.
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+using namespace std;
+void main ()
+{
+	int i=0,n;	
+	float PR,P1,P2,P3,EF,NF,s;
+	cout<<"ingrese el numero de estudiantes:";
+	cin>> n;
+	s=0;
+	while(i<n)
+	{
+				cout<< "ingrese la nota practica:";
+				cin>> PR;			
+				cout<< "ingrese la nota del primer parcial:";
+				cin>> P1;	
+				cout<< "ingrese la nota del segundo pracial:";
+				cin>> P2;
+				cout<< "ingrese la nota del tercer parcial:";
+				cin>> P3;
+				cout<< "ingrese la nota del examen final:";
+				cin>> EF;
+				NF= (PR*0.2)+((P1+P2+P3)/3)*0.4+(EF*0.4);
+				s=s+NF;
+				cout<<"la nota final es:"<<NF<<endl;
+				system ("cls");
+				i++;
+	}
+	cout<<"el promedio de todas la notas de los estudiantes es:"<<s/n<<endl;
+	getch();
+}
