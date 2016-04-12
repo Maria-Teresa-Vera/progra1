@@ -1,0 +1,26 @@
+// whilevalidacionfactorial.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main()
+{
+	int factorial,i,n;
+	factorial=1;
+	i=1;
+	do {
+		cout<<"Ingrese el valor de n:";
+		cin>>n;
+	}while (n<0);
+	while (i<=n)
+	{
+		factorial=factorial*i;
+		i++;
+	}
+	cout<<"el factorial de "<<n<<"es:"<<factorial;
+	getch()
+}
