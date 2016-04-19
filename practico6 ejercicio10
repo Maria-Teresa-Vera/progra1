@@ -1,0 +1,30 @@
+// parctico 6 ejercicio10.cpp : Defines the entry point for the console application.
+//
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "Math.h"
+using namespace std;
+void main()
+{
+	int n,sig,i;
+	float x,fact,s;
+	s=0;
+	fact=1;
+	sig=1;
+	cout<<"ingrese hasta el termino de n:";
+	cin>>n;
+	cout<< "ingrese el valor para x:";
+	cin>>x;
+	for (i=1;i<=n;i=i++)
+	{
+		if(i%2!=0)
+		{
+		s=s+sig*(pow(x,i)/fact);
+		sig=-sig;
+		}
+		fact=fact*(i+1);
+	}
+	cout<<"La suma es:"<<s<<endl;
+	getch();
+}
