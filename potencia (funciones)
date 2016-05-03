@@ -1,0 +1,31 @@
+// calculo potencia (funciones).cpp : Defines the entry point for the console application.
+//se ingresan como datos de entrada su radio y su altura
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+float POTEN(float x, float y);
+int main()
+{
+	float x,y,z; //prototipo de la funcion
+	cout<<"Ingrese el valor de la base:";
+	cin>>x;
+	cout <<"Ingrese el valor de la potencia:" ; 
+	cin >>y;
+	z=POTEN(x,y); //Llamada a la funcion
+	cout <<"El resultado de la operacion es:"<<z<<endl;
+	getch();
+	return 0;
+	
+ }
+
+// Declaracion  o definicion de la funcion
+float POTEN (float x, float y)
+{ 
+	float s;
+	s=1;
+	for(int i=1;i<=y;i++)
+		s=s*x;
+	return s;
+}
