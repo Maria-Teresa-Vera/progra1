@@ -1,0 +1,120 @@
+// vectores ej 10.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#define MAX 100
+using namespace std;
+void cargar (double a[],double b[],int tam,int tam2);
+void mostrar (double a[],double b[],int tam,int tam2);
+void burbuja (double a[],double b[],int tam,int tam2);
+void intercalar (double a[],double b[],double c[],int tam,int tam2);
+void main()
+{
+	int m,n;
+	double a[MAX],b[MAX],c[MAX];
+	do
+	{
+		cout<<"Ingrese el numero de elementos del vector a:";
+		cin>>n;
+	}while (n<=0);
+	do
+	{
+		cout<<"Ingrese el numero de elementos del vector b:";
+		cin>>m;
+	}while (m<=0);
+	cargar(a,b,n,m);
+	mostrar (a,b,n,m);
+	burbuja (a,b,n,m);
+	intercalar (a,b,c,n,m);
+	getch();
+
+}
+
+
+void cargar (double a[],double b[],int tam,int tam2)
+{
+	for (int i=0;i<tam;i++)
+	{
+		cout<<"A["<<i<<"]=";
+		cin>>a[i];
+	}
+	cout<<endl;
+
+	for (int i=0;i<tam2;i++)
+	{
+		cout<<"B["<<i<<"]=";
+		cin>>b[i];
+	}
+	cout<<endl;
+}
+
+void mostar (double a[],double b[],int tam,int tam2)
+{
+	for (int i=0;i<tam;i++)
+	{
+		cout<<"A["<<i<<"]="<<a[i]<<endl;
+	}
+	cout<<endl;
+	for (int i=0;i<tam2;i++)
+	{
+		cout<<"B["<<i<<"]="<<b[i]<<endl;
+	}
+	cout<<endl;
+}
+
+
+void burbuja(double a[],double b[],int tam,int tam2)
+{
+	for (int i=0;i<tam;i++)
+	{
+		for (int j=i+1;j<tam;j++)
+		{
+			if (a[i]>a[j])
+			{
+				int temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+			}
+		}
+	}
+
+	for (int i=0;i<tam2;i++)
+	{
+		for (int j=i+1;j<tam2;j++)
+		{
+			if (b[i]>b[j])
+			{
+				int temp2=b[i];
+				b[i]=b[j];
+				b[j]=temp2;
+			}
+		}
+	}
+}
+
+
+void intercalar (double a[],double b[],double c[],int tam,int tam2)
+{
+	int i=0;
+	int j=0;
+	int k=0;
+
+
+	while ((i<tam)&&(j<tam2))
+	{
+		if (a[i]<b[j])
+	{
+		c[k]=a[i];
+		i++;
+	}
+		else
+		{
+			c[k]=b[i];
+			i++;
+		}
+
+		cout<<cout<<"C["<<k<<"]="<<c[k]<<endl;
+}
+
